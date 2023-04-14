@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 module.exports = (sequelize) => {
-  const Temperaments = sequelize.define(
-    "temperaments",
+  const Temperament = sequelize.define(
+    "temperament",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -18,5 +18,5 @@ module.exports = (sequelize) => {
       timestamps: false,
     }
   );
-  return Temperaments;
+  return Temperament;
 };

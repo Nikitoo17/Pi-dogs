@@ -2,7 +2,7 @@ require("dotenv").config();
 const { API, API_KEY } = process.env;
 const axios = require("axios");
 const { Sequelize } = require("sequelize");
-const { Temperaments } = require("../db");
+const { Temperament } = require("../db");
 
 const getTemperaments = async () => {
   return await axios
@@ -17,7 +17,7 @@ const getTemperaments = async () => {
       if (validTemperaments.length === 0) {
         throw new Error("Don´t exist valid temperaments");
       } else {
-        await Temperaments.bulkCreate(validTemperaments);
+        await Temperament.bulkCreate(validTemperaments);
         return validTemperaments;
       }
     });

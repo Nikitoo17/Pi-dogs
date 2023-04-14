@@ -7,7 +7,7 @@ const getDogsByID = async (id) => {
     .get(`${API}/breeds/${id}?api_key=${API_KEY}`)
     .then((response) => {
       const dog = response.data;
-      if (!dog) {
+      if (!dog.name) {
         throw new Error("No se encontro el Perro");
       } else {
         return dog;
