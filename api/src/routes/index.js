@@ -63,7 +63,14 @@ router.get("/temperaments", async (req, res) => {
 router.post("/dogs", async (req, res) => {
   const { name, image, height, weight, life_span, temperaments } = req.body;
   try {
-    const data = postDogs(name, image, height, weight, life_span, temperaments);
+    const data = await postDogs(
+      name,
+      image,
+      height,
+      weight,
+      life_span,
+      temperaments
+    );
     res.status(200).json(data);
   } catch (error) {
     res.status(400).json({ error: error.message });

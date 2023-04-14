@@ -26,6 +26,7 @@ const postDogs = async (
       },
     });
     await createdDog.addTemperaments(foundTemperaments);
+    await createdDog.save();
     return createdDog;
   } catch (error) {
     console.error(error);
