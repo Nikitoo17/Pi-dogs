@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 
 // const container = document.getElementById("root");
 // const root = createRoot(container); // createRoot(container!) if you use TypeScript
@@ -14,9 +15,9 @@ import reportWebVitals from "./reportWebVitals";
 //   </Provider>
 // );
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

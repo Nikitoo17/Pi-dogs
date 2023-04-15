@@ -3,8 +3,12 @@ const { API, API_KEY } = process.env;
 const axios = require("axios");
 const { Op } = require("sequelize");
 const { Dog } = require("../db");
+const getDogs = require("./getDogs");
 
 const getDogsByName = async (name) => {
+  if (name === "") {
+    return getDogs();
+  }
   const dogsDB = await Dog.findAll({
     where: {
       name: {

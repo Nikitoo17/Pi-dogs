@@ -17,7 +17,7 @@ const router = Router();
 router.get("/dogs/", async (req, res) => {
   const { name } = req.query;
   try {
-    const data = name ? await getDogsByName(name) : await getDogsByName();
+    const data = name ? await getDogsByName(name) : await getDogs();
     res.status(200).json(data);
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -26,14 +26,14 @@ router.get("/dogs/", async (req, res) => {
 
 /***************************************************************************/
 
-router.get("/dogs", async (req, res) => {
-  try {
-    const data = await getDogs();
-    res.status(200).json(data);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
+// router.get("/dogs", async (req, res) => {
+//   try {
+//     const data = await getDogs();
+//     res.status(200).json(data);
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
+// });
 
 /* *********************************************************************** */
 
