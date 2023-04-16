@@ -2,6 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Landing from "./views/landing/Landing";
 import Home from "./views/home/Home";
+import Details from "./views/home/Details";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/asdasd" element={<Landing />} />
         <Route path="/" element={<Home />} />
+        <Route path="/details/:id" element={<Details />} />
       </Routes>
       <h1>Henry Dogs</h1>
     </div>

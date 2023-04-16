@@ -4,10 +4,11 @@ export default function Cards({ dogs }) {
   const perros = dogs.map((dog) => (
     <Card
       key={dog.id}
+      id={dog.id}
       name={dog.name}
       temperament={dog.temperament}
       image={dog.image}
-      weight={dog.weight.imperial}
+      weight={dog.weight.metric}
     />
   ));
   return <div className={styles.cards}>{perros}</div>;
