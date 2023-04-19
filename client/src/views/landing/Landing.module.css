@@ -1,0 +1,14 @@
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://picfiles.alphacoders.com/288/288986.jpg");
+  background-size: cover;
+  height: 97vh;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
