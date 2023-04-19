@@ -61,16 +61,28 @@ router.get("/temperaments", async (req, res) => {
 /* *********************************************************************** */
 
 router.post("/dogs", async (req, res) => {
-  const { name, image, height, weight, life_span, temperaments } = req.body;
+  const {
+    name,
+    //image,
+    heightMin,
+    heightMax,
+    weightMin,
+    weightMax,
+    life_span,
+    temperaments,
+  } = req.body;
   try {
     const data = await postDogs(
       name,
-      image,
-      height,
-      weight,
+      //image,
+      heightMin,
+      heightMax,
+      weightMin,
+      weightMax,
       life_span,
       temperaments
     );
+    console.log(data);
     res.status(200).json(data);
   } catch (error) {
     res.status(400).json({ error: error.message });

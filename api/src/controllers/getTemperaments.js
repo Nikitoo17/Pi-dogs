@@ -24,8 +24,15 @@ const getTemperaments = async () => {
       if (validTemperaments.length === 0) {
         throw new Error("Don't exist valid temperaments");
       } else {
-        await Temperament.bulkCreate(validTemperaments);
-        return validTemperaments;
+        const createdTemperaments = [];
+        for (const temp of validTemperaments) {
+          const [created, _] = await Temperament.findOrCreate({
+            where: { name: temp.name },
+            defaults: { name: temp.name },
+          });
+          createdTemperaments.push(created);
+        }
+        return createdTemperaments;
       }
     });
 };

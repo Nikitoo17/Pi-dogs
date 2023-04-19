@@ -4,18 +4,20 @@ const { Temperament } = require("../db");
 
 const postDogs = async (
   name,
-  image,
-  height,
-  weight,
+  //image,
+  heightMin,
+  heightMax,
+  weightMin,
+  weightMax,
   life_span,
   temperaments
 ) => {
   try {
     const createdDog = await Dog.create({
       name,
-      image,
-      height,
-      weight,
+      //  image,
+      height: `${heightMin} - ${heightMax} Cm`,
+      weight: `${weightMin} - ${weightMax} Kg`,
       life_span,
     });
     const foundTemperaments = await Temperament.findAll({

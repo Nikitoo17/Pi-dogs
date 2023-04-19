@@ -1,0 +1,30 @@
+.select {
+  /* Ocultamos la flecha nativa del campo select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Establecemos un ancho mínimo para evitar que el campo se vea muy pequeño */
+  min-width: 250px;
+  /* Establecemos un borde y un padding para dar un aspecto de caja al campo */
+  border: 1px solid #ccc;
+  padding: 5px;
+  /* Establecemos un fondo y un color de texto para el campo */
+  background-color: #fff;
+  color: #333;
+  /* Establecemos un estilo de cursor para indicar que el campo es interactivo */
+  cursor: pointer;
+}
+/* Establecemos un estilo de fondo y un color de texto para las opciones seleccionadas */
+select option:checked {
+  background-color: burlywood;
+  color: black;
+}
+/* Establecemos un estilo de hover para las opciones del campo */
+select option:hover {
+  background-color: burlywood;
+  color: black;
+}
+.option:hover {
+  background-color: burlywood;
+  color: black;
+}
