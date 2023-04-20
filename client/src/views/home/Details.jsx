@@ -14,7 +14,6 @@ export default function Details() {
       .then((response) => {
         const data = response.data;
         setDetails(data);
-        console.log(data);
         if (data.dogDB) {
           if (data.dogAPI.reference_image_id) {
             dogImage(data.dogAPI.reference_image_id);
@@ -39,20 +38,21 @@ export default function Details() {
 
     setImageUrl(url);
   };
+  console.log(details);
 
-  return details.dogDB ? (
+  return !details.origin ? (
     <Detail
-      id={details.dogDB.id}
+      id={details.id}
       image={
-        details.dogDB.image
-          ? details.dogDB.image
+        details.image
+          ? details.image
           : "https://i.pinimg.com/564x/15/da/40/15da4089fe96ee453673ca6b50fb73eb.jpg"
       }
-      name={details.dogDB.name}
-      weight={details.dogDB.weight ? details.dogDB.weight : "Desconocido"}
-      height={details.dogDB.height ? details.dogDB.height : "Desconocido"}
-      life_span={details.dogDB.life_span}
-      temperaments={details.dogDB.temperament}
+      name={details.name}
+      weight={details.weight}
+      height={details.height}
+      life_span={details.life_span}
+      temperaments={details.temperament ? details.temperament.join(", ") : null}
     />
   ) : (
     <Detail
