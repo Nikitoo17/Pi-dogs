@@ -6,7 +6,9 @@ export default function Card({ name, image, temperament, weight, id }) {
   const [imageUrl, setImageUrl] = useState("");
   useEffect(() => {
     async function getImageUrl() {
-      const url = await image;
+      const url = image
+        ? await image
+        : "https://i.pinimg.com/564x/15/da/40/15da4089fe96ee453673ca6b50fb73eb.jpg";
       setImageUrl(url);
     }
     getImageUrl();

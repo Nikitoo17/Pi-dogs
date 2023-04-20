@@ -21,9 +21,10 @@ export default function Home() {
   }, []);
 
   const dogsPerPage = 8;
-  const indexOfLastDog = currentPage * dogsPerPage;
-  const indexOfFirstDog = indexOfLastDog - dogsPerPage;
+  const indexOfLastDog = Math.min(currentPage * dogsPerPage, dogs.length);
+  const indexOfFirstDog = (currentPage - 1) * dogsPerPage;
   const currentDogs = dogs.slice(indexOfFirstDog, indexOfLastDog);
+  console.log(`currentDogs length: ${currentDogs.length}`);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 

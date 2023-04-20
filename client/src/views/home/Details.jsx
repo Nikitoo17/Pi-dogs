@@ -41,44 +41,19 @@ export default function Details() {
   };
 
   return details.dogDB ? (
-    <div>
-      <Detail
-        id={details.dogDB.id}
-        image={
-          details.dogDB.image
-            ? details.dogDB.image
-            : "https://i.pinimg.com/564x/15/da/40/15da4089fe96ee453673ca6b50fb73eb.jpg"
-        }
-        name={details.dogDB.name}
-        weight={details.dogDB.weight ? details.dogDB.weight : "Desconocido"}
-        height={details.dogDB.height ? details.dogDB.height : "Desconocido"}
-        life_span={details.dogDB.life_span}
-        temperaments={details.dogDB.temperament}
-      />
-      {details.dogAPI && (
-        <Detail
-          id={details.dogAPI.id}
-          image={
-            imageUrl
-              ? imageUrl
-              : "https://i.pinimg.com/564x/15/da/40/15da4089fe96ee453673ca6b50fb73eb.jpg"
-          }
-          name={details.dogAPI.name}
-          weight={
-            details.dogAPI.weight && details.dogAPI.weight.metric
-              ? details.dogAPI.weight.metric
-              : "Desconocido"
-          }
-          height={
-            details.dogAPI.height && details.dogAPI.height.metric
-              ? details.dogAPI.height.metric
-              : "Desconocido"
-          }
-          life_span={details.dogAPI.life_span}
-          temperaments={details.dogAPI.temperament}
-        />
-      )}
-    </div>
+    <Detail
+      id={details.dogDB.id}
+      image={
+        details.dogDB.image
+          ? details.dogDB.image
+          : "https://i.pinimg.com/564x/15/da/40/15da4089fe96ee453673ca6b50fb73eb.jpg"
+      }
+      name={details.dogDB.name}
+      weight={details.dogDB.weight ? details.dogDB.weight : "Desconocido"}
+      height={details.dogDB.height ? details.dogDB.height : "Desconocido"}
+      life_span={details.dogDB.life_span}
+      temperaments={details.dogDB.temperament}
+    />
   ) : (
     <Detail
       id={details.id}
