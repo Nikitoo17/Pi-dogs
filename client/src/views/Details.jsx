@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Detail from "../../components/details/Detail";
+import Detail from "../components/details/Detail";
 
 export default function Details() {
   const [details, setDetails] = useState({});
@@ -38,9 +38,13 @@ export default function Details() {
 
     setImageUrl(url);
   };
-  console.log(details);
+  const isUUID = (id) => {
+    const uuidRegex =
+      /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$/;
+    return uuidRegex.test(id);
+  };
 
-  return !details.origin ? (
+  return isUUID(details.id) ? (
     <Detail
       id={details.id}
       image={

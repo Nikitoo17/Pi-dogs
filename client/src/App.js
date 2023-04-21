@@ -1,9 +1,9 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Landing from "./views/landing/Landing";
-import Home from "./views/home/home/Home";
-import Details from "./views/home/Details";
-import FormPage from "./views/home/FormPage";
+import Home from "./views/home/Home";
+import Details from "./views/Details";
+import FormPage from "./views/FormPage";
 
 function App() {
   return (
