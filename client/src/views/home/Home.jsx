@@ -116,10 +116,12 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
-      <OrderDogs order={orderDogs} />
-      <FilterDogs filterData={filterData} />
-      <FilterTemperaments filterTemps={filterTemps} />
-      <SearchBar filterDogs={filterDogs} />
+      <div className={styles.bar}>
+        <FilterDogs filterData={filterData} />
+        <OrderDogs order={orderDogs} />
+        <SearchBar filterDogs={filterDogs} />
+        <FilterTemperaments filterTemps={filterTemps} />
+      </div>
       <Cards dogs={currentDogs}></Cards>
       <Pagination
         itemsPerPage={dogsPerPage}

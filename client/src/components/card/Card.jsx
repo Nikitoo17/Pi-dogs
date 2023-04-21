@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function Card({ name, image, temperament, weight, id }) {
   const [imageUrl, setImageUrl] = useState("");
+  const [scale, setScale] = useState(false);
   useEffect(() => {
     async function getImageUrl() {
       const url = image
@@ -13,28 +14,33 @@ export default function Card({ name, image, temperament, weight, id }) {
     }
     getImageUrl();
   }, [image]);
+
   return (
     <Link to={`/details/${id}`}>
-      <div className={styles.CardContainer}>
-        <div>
-          <div>
-            <h3>{name}</h3>
-            {imageUrl ? (
-              <div
-                className={styles.CardImage}
-                style={{
-                  backgroundImage: `url(${imageUrl})`,
-                }}
-              ></div>
-            ) : (
-              <div
-                className={styles.CardImage}
-                style={{
-                  backgroundImage: `url("https://i.pinimg.com/564x/15/da/40/15da4089fe96ee453673ca6b50fb73eb.jpg")`,
-                }}
-              ></div>
-            )}
-            <h3>Entre {weight} Kg</h3>
+      <div>
+        <div
+          className={styles.CardContainer}
+          onMouseEnter={() => setScale(true)}
+          onMouseLeave={() => setScale(false)}
+        >
+          <h3>{name}</h3>
+          {imageUrl ? (
+            <div
+              className={styles.CardImage}
+              style={{
+                backgroundImage: `url(${imageUrl})`,
+              }}
+            ></div>
+          ) : (
+            <div
+              className={styles.CardImage}
+              style={{
+                backgroundImage: `url("https://i.pinimg.com/564x/15/da/40/15da4089fe96ee453673ca6b50fb73eb.jpg")`,
+              }}
+            ></div>
+          )}
+          <h3 className={styles.h3}>Entre {weight} Kg</h3>
+          <div className={scale ? styles.temperament : styles.temperament}>
             {temperament ? (
               temperament
                 .split(",")

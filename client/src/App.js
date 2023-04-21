@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Landing from "./views/landing/Landing";
 import Home from "./views/home/Home";
-import Details from "./views/Details";
+import Details from "./views/details/Details";
 import FormPage from "./views/FormPage";
 
 function App() {

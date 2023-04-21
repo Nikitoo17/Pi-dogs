@@ -7,15 +7,6 @@ import store from "./redux/store";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 
-// const container = document.getElementById("root");
-// const root = createRoot(container); // createRoot(container!) if you use TypeScript
-// root.render(
-//   <Provider store={store}>
-//     <BrowserRouter>
-//       <App />
-//     </BrowserRouter>
-//   </Provider>
-// );
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
@@ -23,7 +14,6 @@ root.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-    ,
   </Provider>
 );
 

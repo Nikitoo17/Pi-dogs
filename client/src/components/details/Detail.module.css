@@ -1,0 +1,38 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  height: 60vh;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 2px 5px 20px white;
+}
+.image {
+  width: 60%;
+  height: 100%;
+  border-right: 2px solid black;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.info {
+  background-image: url("https://i.pinimg.com/564x/b9/78/b3/b978b3c89fd707ab0ebd89ba05368e4e.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 0%;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  justify-content: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-weight: bold;
+}
