@@ -63,7 +63,7 @@ router.get("/temperaments", async (req, res) => {
 router.post("/dogs", async (req, res) => {
   const {
     name,
-    //image,
+    image,
     heightMin,
     heightMax,
     weightMin,
@@ -74,7 +74,7 @@ router.post("/dogs", async (req, res) => {
   try {
     const data = await postDogs(
       name,
-      //image,
+      image,
       heightMin,
       heightMax,
       weightMin,

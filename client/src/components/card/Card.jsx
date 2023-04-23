@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 export default function Card({ name, image, temperament, weight, id }) {
   const [imageUrl, setImageUrl] = useState("");
-  const [scale, setScale] = useState(false);
   useEffect(() => {
     async function getImageUrl() {
       const url = image
@@ -16,13 +15,9 @@ export default function Card({ name, image, temperament, weight, id }) {
   }, [image]);
 
   return (
-    <Link to={`/details/${id}`}>
+    <Link to={`/details/${id}`} style={{ textDecoration: "none" }}>
       <div>
-        <div
-          className={styles.CardContainer}
-          onMouseEnter={() => setScale(true)}
-          onMouseLeave={() => setScale(false)}
-        >
+        <div className={styles.CardContainer}>
           <h3>{name}</h3>
           {imageUrl ? (
             <div
@@ -40,7 +35,7 @@ export default function Card({ name, image, temperament, weight, id }) {
             ></div>
           )}
           <h3 className={styles.h3}>Entre {weight} Kg</h3>
-          <div className={scale ? styles.temperament : styles.temperament}>
+          <div className={styles.temperament}>
             {temperament ? (
               temperament
                 .split(",")

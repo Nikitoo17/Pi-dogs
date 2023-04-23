@@ -13,7 +13,7 @@ export default function Detail({
   return (
     <div className={style.detail}>
       <Link to="/home">
-        <button>GO HOME</button>
+        <button className={style.button}>GO HOME</button>
       </Link>
       <div className={style.card}>
         <img className={style.image} src={image} alt="" />

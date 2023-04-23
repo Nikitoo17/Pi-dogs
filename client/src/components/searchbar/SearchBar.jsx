@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import styles from "./SearchBar.module.css";
 
 export default function SearchBar({ filterDogs }) {
   const [inputValue, setInputValue] = useState("");
@@ -16,13 +17,14 @@ export default function SearchBar({ filterDogs }) {
   return (
     <div>
       <input
+        className={styles.input}
         type="text"
         name="name"
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
+        onKeyUp={handleSearch}
         placeholder="Buscar raza de perro por nombre"
       />
-      <button onClick={handleSearch}>BUSCAR</button>
     </div>
   );
 }

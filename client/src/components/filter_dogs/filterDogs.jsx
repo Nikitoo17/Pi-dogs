@@ -1,3 +1,5 @@
+import styles from "./filterDogs.module.css";
+
 export default function FilterDogs({ filterData }) {
   const handleAll = () => {
     filterData("all");
@@ -10,9 +12,15 @@ export default function FilterDogs({ filterData }) {
   };
   return (
     <div>
-      <button onClick={handleAll}>ALL</button>
-      <button onClick={handleApi}>API</button>
-      <button onClick={handleDb}>DB</button>
+      <button className={styles.button} onClick={handleAll}>
+        ALL
+      </button>
+      <button className={styles.button} onClick={handleApi}>
+        API
+      </button>
+      <button className={styles.button} onClick={handleDb}>
+        DB
+      </button>
     </div>
   );
 }

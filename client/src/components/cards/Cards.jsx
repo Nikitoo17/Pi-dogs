@@ -17,7 +17,13 @@ export default function Cards({ dogs }) {
       id={dog.id}
       name={dog.name}
       temperament={dog.temperament}
-      image={dog.reference_image_id ? dogImage(dog.reference_image_id) : null}
+      image={
+        dog.reference_image_id
+          ? dogImage(dog.reference_image_id)
+          : dog.image
+          ? dog.image
+          : null
+      }
       weight={dog.weight && dog.weight.metric ? dog.weight.metric : dog.weight}
     />
   ));

@@ -1,0 +1,15 @@
+.button {
+  background-image: url("https://www.pngall.com/wp-content/uploads/2016/06/Bone-PNG.png");
+  background-position: center center;
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  width: 200px;
+  height: 70px;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  text-shadow: 1px 1px 1px white;
+  margin-right: 5px;
+}

@@ -7,6 +7,7 @@ import SearchBar from "../../components/searchbar/SearchBar";
 import OrderDogs from "../../components/order/order";
 import FilterTemperaments from "../../components/filter_temperaments/filterTemperaments";
 import FilterDogs from "../../components/filter_dogs/filterDogs";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [dogs, setDogs] = useState([]);
@@ -117,11 +118,14 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <div className={styles.bar}>
-        <FilterDogs filterData={filterData} />
         <OrderDogs order={orderDogs} />
         <SearchBar filterDogs={filterDogs} />
         <FilterTemperaments filterTemps={filterTemps} />
+        <Link to="/form">
+          <button className={styles.button}>CREAR</button>
+        </Link>
       </div>
+      <FilterDogs filterData={filterData} />
       <Cards dogs={currentDogs}></Cards>
       <Pagination
         itemsPerPage={dogsPerPage}

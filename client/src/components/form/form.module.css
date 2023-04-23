@@ -1,25 +1,16 @@
 .select {
-  /* Ocultamos la flecha nativa del campo select */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* Establecemos un ancho mínimo para evitar que el campo se vea muy pequeño */
   min-width: 250px;
-  /* Establecemos un borde y un padding para dar un aspecto de caja al campo */
+  min-height: 200px;
   border: 1px solid #ccc;
   padding: 5px;
-  /* Establecemos un fondo y un color de texto para el campo */
   background-color: #fff;
   color: #333;
-  /* Establecemos un estilo de cursor para indicar que el campo es interactivo */
   cursor: pointer;
 }
-/* Establecemos un estilo de fondo y un color de texto para las opciones seleccionadas */
 select option:checked {
   background-color: burlywood;
   color: black;
 }
-/* Establecemos un estilo de hover para las opciones del campo */
 select option:hover {
   background-color: burlywood;
   color: black;
@@ -27,4 +18,49 @@ select option:hover {
 .option:hover {
   background-color: burlywood;
   color: black;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  width: 40vw;
+  height: fit-content;
+  background-image: linear-gradient(to right, black, green, white);
+  box-shadow: 10px 10px 15px black;
+  background-size: cover;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.input {
+  border: none;
+  box-shadow: 1px 1px 10px purple;
+}
+.input2 {
+  width: 100px;
+  border: none;
+  box-shadow: 1px 1px 10px purple;
+}
+.button {
+  background-image: url("https://www.pngall.com/wp-content/uploads/2016/06/Bone-PNG.png");
+  background-position: center center;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  width: 110px;
+  height: 40px;
+  color: black;
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+  text-shadow: 1px 1px 1px white;
+  margin-right: 5px;
 }

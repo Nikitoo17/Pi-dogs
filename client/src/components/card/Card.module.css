@@ -2,7 +2,7 @@
   border-radius: 15px;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, black, purple);
+  background-image: linear-gradient(to right, black, green, white);
   box-shadow: 10px 10px 15px black;
   background-size: cover;
   color: white;
@@ -12,7 +12,7 @@
 }
 .CardContainer:hover {
   transform: scale(1.03);
-
+  border-bottom: 1px solid brown;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
@@ -32,7 +32,7 @@
 }
 
 .temperament {
-  border-top: 1px solid white;
+  border-top: 1px solid brown;
   display: flex;
   flex-direction: column;
   height: fit-content;
@@ -40,7 +40,7 @@
   gap: 0px;
   margin: 0px;
   padding: 0px;
-  background-image: linear-gradient(to right, black, purple);
+  background-image: linear-gradient(to right, black, green, white);
   box-shadow: 10px 10px 15px black;
   color: white;
   opacity: 0;
