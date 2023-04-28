@@ -17,7 +17,7 @@ export default function Pagination({
   }
 
   if (endPage > totalPages) {
-    startPage = totalPages;
+    startPage = totalPages - 1;
     endPage = totalPages;
   }
 
@@ -29,7 +29,6 @@ export default function Pagination({
     <nav className={styles.page}>
       <p>
         <button
-          className="page-link"
           onClick={() => paginate(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -45,7 +44,6 @@ export default function Pagination({
       ))}
       <p>
         <button
-          className="page-link"
           onClick={() => paginate(currentPage + 1)}
           disabled={currentPage === Math.ceil(totalItems / itemsPerPage)}
         >

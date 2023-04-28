@@ -4,6 +4,10 @@ const axios = require("axios");
 const { Temperament } = require("../db");
 
 const getTemperaments = async () => {
+  const temps = Temperament.findAll();
+  if (temps.length) {
+    return temps;
+  }
   return await axios
     .get(`${API}/breeds?api_key=${API_KEY}`)
     .then(async (response) => {

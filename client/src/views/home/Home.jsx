@@ -37,15 +37,18 @@ export default function Home() {
 
   const handleFilterDogsByName = (filtered) => {
     dispatch(filterDogsByName(filtered));
+    setCurrentPage(1);
   };
   const handleOrderDogs = (order) => {
     dispatch(orderDogs(order));
   };
   const handleFilterTemperaments = (temperament) => {
     dispatch(filterDogsByTemperament(temperament));
+    setCurrentPage(1);
   };
   const handleFilterDogs = (type) => {
     dispatch(filterDogs(type));
+    setCurrentPage(1);
   };
 
   const dogsPerPage = 8;

@@ -64,3 +64,9 @@ select option:hover {
   text-shadow: 1px 1px 1px white;
   margin-right: 5px;
 }
+.error {
+  color: red;
+  font-size: 12px;
+  padding-left: 10px;
+  font-weight: bold;
+}
