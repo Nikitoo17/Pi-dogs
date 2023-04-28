@@ -87,6 +87,7 @@ export default function Form({ temperaments }) {
       alert("Raza agregada exitosamente!");
       // ********** Limpiar los imputs ********
       document.getElementById("nombre").value = "";
+      document.getElementById("image").value = "";
       document.getElementById("altura-min").value = "";
       document.getElementById("altura-max").value = "";
       document.getElementById("peso-min").value = "";
