@@ -16,8 +16,8 @@ export default function Pagination({
     endPage = currentPage + 2;
   }
 
-  if (endPage > totalPages - 1) {
-    startPage = totalPages - 2;
+  if (endPage > totalPages) {
+    startPage = totalPages - 3;
     endPage = totalPages;
   }
 
