@@ -8,10 +8,16 @@ const DogAct = require("./models/Dogs");
 const { text } = require("express");
 
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`,
+  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/nick_dogs`,
   {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+    dialectOptions: {
+      ssl: {
+        require: true, // Habilitar SSL
+        rejectUnauthorized: false, // Opcional: permite conexiones no autenticadas (puede variar según la configuración de Render)
+      },
+    },
   }
 );
 const basename = path.basename(__filename);
