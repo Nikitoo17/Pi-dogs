@@ -12,7 +12,7 @@ export const FILTER_DOGS = "FILTER_DOGS";
 
 export const getTemperaments = () => async (dispatch) => {
   try {
-    const response = await axios.get("http://localhost:3001/temperaments");
+    const response = await axios.get("temperaments");
     const data = response.data.map((temp) => temp.name);
     dispatch({
       type: GET_TEMPERAMENTS,
@@ -46,7 +46,7 @@ export const fetchDogs = () => {
   return (dispatch) => {
     dispatch(fetchDogsRequest());
     axios
-      .get("http://localhost:3001/dogs/")
+      .get("dogs/")
       .then((response) => {
         const dogs = response.data;
         dispatch(fetchDogsSuccess(dogs));
