@@ -6,7 +6,7 @@ export default function SearchBar({ filterDogs }) {
   const [inputValue, setInputValue] = useState("");
   const handleSearch = () => {
     axios
-      .get(`http://localhost:3001/dogs/?name=${inputValue}`)
+      .get(`dogs/?name=${inputValue}`)
       .then((response) => {
         filterDogs(response.data);
         console.log(response.data);
