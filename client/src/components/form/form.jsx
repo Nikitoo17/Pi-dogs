@@ -100,7 +100,7 @@ export default function Form({ temperaments }) {
     event.preventDefault();
     try {
       const body = crearRaza();
-      await axios.post(`http://localhost:3001/dogs`, body);
+      await axios.post(`dogs`, body);
       alert("Raza agregada exitosamente!");
       // ********** Limpiar los imputs ********
       document.getElementById("nombre").value = "";
