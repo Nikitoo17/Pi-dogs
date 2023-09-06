@@ -11,7 +11,7 @@ export default function Details() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/dogs/${id}`)
+      .get(`dogs/${id}`)
       .then((response) => {
         const data = response.data;
         setDetails(data);
